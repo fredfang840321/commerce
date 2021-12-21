@@ -1,0 +1,46 @@
+<?php
+/**
+ * @link https://craftcms.com/
+ * @copyright Copyright (c) Pixel & Tonic, Inc.
+ * @license https://craftcms.github.io/license/
+ */
+
+namespace craft\commerce\records;
+
+use craft\commerce\db\Table;
+use craft\db\ActiveRecord;
+
+/**
+ * Email record.
+ *
+ * @property string $bcc
+ * @property string $cc
+ * @property string $replyTo
+ * @property bool $enabled
+ * @property int $id
+ * @property string $name
+ * @property string $recipientType
+ * @property string $subject
+ * @property string $templatePath
+ * @property string $plainTextTemplatePath
+ * @property string $pdfId
+ * @property string $to
+ * @property string $language
+ * @author Pixel & Tonic, Inc. <support@pixelandtonic.com>
+ * @since 2.0
+ */
+class Email extends ActiveRecord
+{
+    const LOCALE_ORDER_LANGUAGE = 'orderLanguage';
+
+    const TYPE_CUSTOMER = 'customer';
+    const TYPE_CUSTOM = 'custom';
+    
+    /**
+     * @inheritdoc
+     */
+    public static function tableName(): string
+    {
+        return Table::EMAILS;
+    }
+}

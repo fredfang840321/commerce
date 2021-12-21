@@ -1,0 +1,9 @@
+{
+  "name": "craftcms-new/commerce",
+  "description": "test",
+  "version": "1.0",
+  "require": {
+      "php": "^7.2"
+  },
+  "license": "MIT"
+}
